@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Metadados e links para CSS e Font Awesome -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comparação de Combustíveis</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Botão para alternar o tema claro/escuro -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Cabeçalho com título e menu de navegação -->
+    <header>
+      <h1>Comparação de Combustíveis</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="viagem.html">Viagem</a></li>
+          <li><a href="conversao.html">Conversão</a></li>
+          <li><a href="consumo.html">Consumo Médio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Conteúdo principal com formulário para comparação -->
+    <main>
+      <section>
+        <h2>Comparação de Combustíveis (Álcool vs. Gasolina)</h2>
+
+        <!-- Campo: Preço da gasolina -->
+        <div class="form-group">
+          <label for="preco-gasolina">Preço da Gasolina (R$)</label>
+          <input type="number" id="preco-gasolina" placeholder="Ex: 5.75" />
+        </div>
+
+        <!-- Campo: Preço do álcool -->
+        <div class="form-group">
+          <label for="preco-alcool">Preço do Álcool (R$)</label>
+          <input type="number" id="preco-alcool" placeholder="Ex: 4.00" />
+        </div>
+
+        <!-- Botão para comparar -->
+        <button onclick="compararCombustiveis()">Comparar</button>
+
+        <!-- Área para exibir o resultado -->
+        <div class="result" id="resultado-comparacao" style="display: none;">
+          <p id="resultado-combustivel"></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Inclusão do JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

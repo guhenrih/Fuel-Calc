@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Metadados e links para CSS e Font Awesome -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversão de Unidades</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Botão para alternar o tema claro/escuro -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Cabeçalho com título e menu de navegação -->
+    <header>
+      <h1>Conversão de Unidades</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="viagem.html">Viagem</a></li>
+          <li><a href="comparacao.html">Comparação</a></li>
+          <li><a href="consumo.html">Consumo Médio</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Conteúdo principal com formulário de conversão -->
+    <main>
+      <section>
+        <h2>Conversão de Unidades</h2>
+
+        <!-- Campo: Valor a ser convertido -->
+        <div class="form-group">
+          <label for="valor-conversao">Valor</label>
+          <input type="number" id="valor-conversao" placeholder="Ex: 100" />
+        </div>
+
+        <!-- Seletor: Tipo de conversão -->
+        <div class="form-group">
+          <label for="tipo-conversao">Tipo de Conversão</label>
+          <select id="tipo-conversao">
+            <option value="kmToMiles">Km para Milhas</option>
+            <option value="milesToKm">Milhas para Km</option>
+            <option value="litrosToGallons">Litros para Galões</option>
+            <option value="gallonsToLitros">Galões para Litros</option>
+          </select>
+        </div>
+
+        <!-- Botão para efetuar a conversão -->
+        <button onclick="converterUnidades()">Converter</button>
+
+        <!-- Área para exibir o resultado -->
+        <div class="result" id="resultado-conversao" style="display: none;">
+          <p id="resultado-conversao-texto"></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Inclusão do JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

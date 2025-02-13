@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Metadados e links para CSS e Font Awesome -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cálculo de Consumo Médio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Botão para alternar o tema claro/escuro -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Cabeçalho com título e menu de navegação -->
+    <header>
+      <h1>Cálculo de Consumo Médio</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="viagem.html">Viagem</a></li>
+          <li><a href="comparacao.html">Comparação</a></li>
+          <li><a href="conversao.html">Conversão</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Conteúdo principal com formulário para o cálculo -->
+    <main>
+      <section>
+        <h2>Cálculo do Consumo Médio (km/l)</h2>
+
+        <!-- Campo: Distância percorrida -->
+        <div class="form-group">
+          <label for="distancia-consumo">Distância percorrida (km)</label>
+          <input type="number" id="distancia-consumo" placeholder="Ex: 150" />
+        </div>
+
+        <!-- Campo: Litros consumidos -->
+        <div class="form-group">
+          <label for="litros-consumo">Litros consumidos</label>
+          <input type="number" id="litros-consumo" placeholder="Ex: 12" />
+        </div>
+
+        <!-- Botão para efetuar o cálculo -->
+        <button onclick="calcularConsumoMedio()">Calcular Consumo Médio</button>
+
+        <!-- Área para exibir o resultado -->
+        <div class="result" id="resultado-consumo" style="display: none;">
+          <p id="consumo-medio-texto"></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Inclusão do JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
